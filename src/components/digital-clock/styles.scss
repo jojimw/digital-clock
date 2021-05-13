@@ -1,0 +1,16 @@
+.wrapper {
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+}
+
+.divider {
+  font-size: 3rem;
+  margin-left: 10px;
+  margin-bottom: 3.6rem;
+}
