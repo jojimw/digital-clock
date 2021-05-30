@@ -5,6 +5,11 @@ import { screenSize } from '../constants/screen';
 import { getWindowSizeFromWidth } from '../utils/screen';
 
 export const useWindowResize = () => {
+  /**
+   * > 800 - screenSize.laptop
+   * <= 800 & > 500 - screenSize.tab
+   * <= 500 - screenSize.phone
+   */
   const [windowSize, setWindowSize] = useState(screenSize.laptop);
 
   useEffect(() => {
@@ -13,12 +18,15 @@ export const useWindowResize = () => {
       setWindowSize(newScreen);
     };
 
+    // called on initial page mount
     updateWindowSize(window);
 
     const onWindowSizeChange = throttle(
       (event) => {
+        // called on window resize event
         updateWindowSize(event.currentTarget);
-      }, 500);
+      }, 500
+    );
 
     window.addEventListener('resize', onWindowSizeChange);
 

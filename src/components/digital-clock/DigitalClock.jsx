@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
+import './styles.scss';
+
 import Slider from '../slider/Slider';
 
-import './styles.scss';
 import { useWindowResize } from '../../hooks/useWindowResize';
 import { hoursDateKey, minutesDateKey, secondsDateKey } from '../../constants/time';
 import { getParsedSliderDateValues } from '../../utils/time';
