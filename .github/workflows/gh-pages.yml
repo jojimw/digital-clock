@@ -2,9 +2,7 @@ name: Github Pages Deployment CI
 
 on:
   push:
-    branches: [ test-ci ]
-  pull_request:
-    branches: [ test-ci ]
+    branches: [ main ]
 
 jobs:
   build:
